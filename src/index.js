@@ -8,8 +8,7 @@ numeros.js - Copyright (C) 2019, Orlando <orlando@orlandoaleman.com>
     var VERSION = '0.1.1';
 
     const literal = [
-        { number: 0, text: "cero" },
-        { number: 100, text: "cien" }
+        { number: 0, text: "cero" }
     ];
 
     const literales1_9 = [
@@ -64,6 +63,7 @@ numeros.js - Copyright (C) 2019, Orlando <orlando@orlandoaleman.com>
     // numeros100_999: literalesCentena [+ conector + (numeros30_99|literales10_29|literales1_9) ]
     const literalesCentena = [
 
+        { number: 100, text: "cien" },
         { number: 100, text: "ciento" },
         { number: 200, text: "doscientos" },
         { number: 300, text: "trescientos"},
@@ -211,12 +211,6 @@ numeros.js - Copyright (C) 2019, Orlando <orlando@orlandoaleman.com>
         if ( r ) {
             accum += r.number;
             i = r.i;
-        }
-        else {
-            if (word === "cien") {
-                accum += 100;
-                i++;
-            }
         }
 
         return accum === 0 ? null :  { number: accum, i };
