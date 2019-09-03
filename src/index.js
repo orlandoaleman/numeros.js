@@ -212,6 +212,12 @@ numeros.js - Copyright (C) 2019, Orlando <orlando@orlandoaleman.com>
             accum += r.number;
             i = r.i;
         }
+        else {
+            if (word === "cien") {
+                accum += 100;
+                i++;
+            }
+        }
 
         return accum === 0 ? null :  { number: accum, i };
     }
